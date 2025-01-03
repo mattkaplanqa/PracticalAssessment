@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 from selenium import webdriver
 from pages.login_page import LoginPage
 from pages.portfolio_page import PortfolioPage
-from utils.email_utils import get_verification_email, click_verification_link
 load_dotenv()
 
 def test_portfolio_value():
@@ -16,8 +15,6 @@ def test_portfolio_value():
 
     login_page = LoginPage(driver)
     login_page.login(username, password)
-
-
 
 
     portfolio_page = PortfolioPage(driver)
