@@ -1,5 +1,3 @@
-import time
-
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
@@ -14,6 +12,4 @@ class LoginPage(BasePage):
         self.click(self.LOGIN_BUTTON)
         self.send_keys(self.USERNAME_INPUT, username)
         self.send_keys(self.PASSWORD_INPUT, password + Keys.ENTER)
-        print('test')
-        time.sleep(1)
         self.click(self.USE_PASSKEY)

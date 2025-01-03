@@ -16,10 +16,11 @@ def test_portfolio_value():
     login_page = LoginPage(driver)
     login_page.login(username, password)
 
-
     portfolio_page = PortfolioPage(driver)
     portfolio_value = portfolio_page.get_portfolio_value()
+
     print(portfolio_value)
+
     assert portfolio_value == "0.00"
 
     driver.quit()
